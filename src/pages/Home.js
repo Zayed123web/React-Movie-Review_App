@@ -1,33 +1,14 @@
 import React from "react";
 import Header from "../component/Header";
+import ReviewSlider from "../component/ReviewSlider";
 
-export default function Home() {
+export default function Home(movies) {
+  const movi = movies.movies;
   return (
     <>
       <div class="main">
         <Header />
-        <div class="review-slider">
-          <ul id="flexiselDemo1">
-            <li>
-              <img src="images/r1.jpg" alt="" />
-            </li>
-            <li>
-              <img src="images/r2.jpg" alt="" />
-            </li>
-            <li>
-              <img src="images/r3.jpg" alt="" />
-            </li>
-            <li>
-              <img src="images/r4.jpg" alt="" />
-            </li>
-            <li>
-              <img src="images/r5.jpg" alt="" />
-            </li>
-            <li>
-              <img src="images/r6.jpg" alt="" />
-            </li>
-          </ul>
-        </div>
+        <ReviewSlider movie={movi} />
         <div class="video">
           <iframe
             src="https://www.youtube.com/embed/2LqzF5WauAw"
